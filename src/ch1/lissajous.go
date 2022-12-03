@@ -7,8 +7,6 @@ import (
 	"io"
 	"math"
 	"math/rand"
-	"os"
-	"time"
 )
 
 var palette = []color.Color{color.White, color.Black}
@@ -18,7 +16,7 @@ const (
 	blackIndex = 1
 )
 
-func lissajous(out io.Writer) {
+func lissajousMe(out io.Writer) {
 	const (
 		cycles  = 5
 		res     = 0.001
@@ -44,7 +42,8 @@ func lissajous(out io.Writer) {
 	}
 	gif.EncodeAll(out, &anim)
 }
-func main() {
-	rand.Seed(time.Now().UTC().UnixNano())
-	lissajous(os.Stdout)
-}
+
+//func main() {
+//	rand.Seed(time.Now().UTC().UnixNano())
+//	lissajous(os.Stdout)
+//}
