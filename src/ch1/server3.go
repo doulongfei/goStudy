@@ -30,5 +30,9 @@ func main() {
 	http.HandleFunc("/gif", func(writer http.ResponseWriter, request *http.Request) {
 		lissajousMe(writer)
 	})
+	http.HandleFunc("/svg", func(writer http.ResponseWriter, request *http.Request) {
+		writer.Header().Set("Content-Type", "imgage/svg+xml")
+
+	})
 	log.Fatal(http.ListenAndServe("localhost:9001", nil))
 }
