@@ -35,9 +35,9 @@ func corner(i, j int) (float64, float64) {
 	return sx, sy
 }
 
-func main() {
-	printSvg()
-}
+//func main() {
+//	printSvg()
+//}
 
 func printSvg() {
 	fmt.Printf("<svg xmlns='http://www.w3.org/2000/svg' "+
