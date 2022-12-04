@@ -1,9 +1,10 @@
-package main
+package ch2
 
 import (
 	"flag"
 	"fmt"
 	"strings"
+	"utils"
 )
 
 var n = flag.Bool("n", false, "omit trailing newline")
@@ -20,16 +21,5 @@ func main() {
 	var x = i
 	println(x)
 
-	fmt.Println(gcd(12, 15))
-}
-
-/*
-*
-求最大公约数
-*/
-func gcd(x, y int) int {
-	for y != 0 {
-		x, y = y, x%y
-	}
-	return x
+	fmt.Println(utils.Gcd(12, 15))
 }

@@ -1,6 +1,9 @@
-package main
+package ch2
 
-import "fmt"
+import (
+	"fmt"
+	"tempc"
+)
 
 func incr(p *int) int {
 	*p++
@@ -26,6 +29,18 @@ func main() {
 
 	p1 := f1()
 	fmt.Println(p1 == f1())
+
+	medals := []string{"gold", "silver", "bronze"}
+	fmt.Println(medals)
+
+	c := tempc.FToC(212.0)
+	fmt.Println(c.String())
+	fmt.Printf("%v\n", c)
+	fmt.Printf("%s\n", c)
+	fmt.Println(c)
+	fmt.Printf("%g\n", c)
+	fmt.Println(float64(c))
+
 }
 
 func f1() *int {
