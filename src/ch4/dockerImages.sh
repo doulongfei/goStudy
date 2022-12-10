@@ -4,6 +4,7 @@ url=http://127.0.0.1:5000
 datas=$(curl -s ${url}/v2/_catalog | ./jq .repositories)
 #echo $datas
 
+
 datas=${datas:1:-1}
 
 i=0
