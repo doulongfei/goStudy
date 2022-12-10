@@ -36,3 +36,7 @@ var y complex128 = complex(3, 4) // 3+4i
 fmt.Println(x*y)                 // "(-5+10i)"
 fmt.Println(real(x*y))           // "-5"
 fmt.Println(imag(x*y))   
+
+
+## 使用shell脚本和jq工具库获取docker私有仓库的地址获取所有的镜像和tag信息，
+## 使用golang语言获取docker私有仓库的地址获取所有的镜像和tag信息，
