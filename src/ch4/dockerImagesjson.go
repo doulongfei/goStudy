@@ -18,7 +18,7 @@ type Tag struct {
 }
 
 func getImagesData(url string, images *Images) Images {
-	resp, err := http.Get(url + "/v2/_catalog")
+	resp, err := http.Get(url)
 	if resp != nil {
 		defer resp.Body.Close()
 	}
@@ -26,7 +26,6 @@ func getImagesData(url string, images *Images) Images {
 		fmt.Println("访问异常", err)
 	}
 	body, _ := io.ReadAll(resp.Body)
-	resp.Body.Close()
 	//err = json.Unmarshal(body, &re)
 	if err = json.Unmarshal(body, &images); err != nil {
 		fmt.Printf("Unmarshal err, %v\n", err)
@@ -60,7 +59,7 @@ func main() {
 	url := strings[0]
 	//fmt.Println(url)
 	var images Images
-	getImagesData(url, &images)
+	getImagesData(url+"/v2/_catalog", &images)
 	//fmt.Println(images)
 	for _, repository := range images.Repositories {
 		var tags Tag
