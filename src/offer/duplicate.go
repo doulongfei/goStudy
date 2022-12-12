@@ -34,12 +34,11 @@ func duplicate2(numbers []int) int {
 			if numbers[i] == numbers[numbers[i]] {
 				return numbers[i]
 			} else {
-				i, numbers[i] = numbers[i], i
+				numbers[i], numbers[numbers[i]] = numbers[numbers[i]], numbers[i]
 				i--
 			}
 		}
 	}
-
 	return -1
 }
 
