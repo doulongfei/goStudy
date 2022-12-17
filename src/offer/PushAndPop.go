@@ -1,4 +1,4 @@
-package main
+package offer
 
 var stack1 []int
 var stack2 []int

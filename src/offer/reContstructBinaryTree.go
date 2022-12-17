@@ -1,4 +1,4 @@
-package main
+package offer
 
 type TreeNode struct {
 	Val   int

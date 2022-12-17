@@ -42,3 +42,4 @@ fmt.Println(imag(x*y))
 ## 使用golang语言获取docker私有仓库的地址获取所有的镜像和tag信息，
 
 使用go做算法练习
+// 测试git终端提价

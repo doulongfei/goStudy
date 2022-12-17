@@ -1,4 +1,4 @@
-package main
+package offer
 
 /*
 *
@@ -42,10 +42,10 @@ func duplicate2(numbers []int) int {
 	return -1
 }
 
-func main() {
-	arr := []int{2, 3, 1, 0, 2, 5, 3}
-	j := duplicate2(arr)
-	//i := duplicate2(arr)
-	//println(i)
-	println(j)
-}
+// func main() {
+// 	arr := []int{2, 3, 1, 0, 2, 5, 3}
+// 	j := duplicate2(arr)
+// 	//i := duplicate2(arr)
+// 	//println(i)
+// 	println(j)
+// }
