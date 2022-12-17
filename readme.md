@@ -40,3 +40,5 @@ fmt.Println(imag(x*y))
 
 ## 使用shell脚本和jq工具库获取docker私有仓库的地址获取所有的镜像和tag信息，
 ## 使用golang语言获取docker私有仓库的地址获取所有的镜像和tag信息，
+
+使用go做算法练习
