@@ -16,7 +16,7 @@ func main() {
 		"second": 12.23,
 	}
 	fmt.Printf("Generic Sums: %v and %v\n",
-		SumIntsOrFloats[string, int64](ints),
+		SumIntsOrFloats(ints),
 		SumIntsOrFloats[string, float64](floats))
 }
 func SumIntsOrFloats[K comparable, V int64 | float64](m map[K]V) V {
