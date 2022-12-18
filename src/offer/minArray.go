@@ -14,3 +14,20 @@ func minNumberInRotateArray(rotateArray []int) int {
 	}
 	return rotateArray[left]
 }
+
+func minNumberInRotateArray2(rotateArray []int) int {
+	size := len(rotateArray)
+	if size == 1 {
+		return rotateArray[0]
+	}
+	return Min(minNumberInRotateArray2(rotateArray[0:size/2]), minNumberInRotateArray2(rotateArray[(size/2):size]))
+}
+
+func Min(a int, b int) int {
+	if a < b {
+		return a
+	} else {
+		return b
+	}
+
+}
