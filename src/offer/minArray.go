@@ -3,7 +3,7 @@ package offer
 func minNumberInRotateArray(rotateArray []int) int {
 	left, right := 0, len(rotateArray)-1
 	for left < right {
-		middle := (right + left) >> 1 // >>1 代表除以2
+		middle := (right + left) >> 1 // >> 1 代表除以2
 		if rotateArray[middle] > rotateArray[right] {
 			left = middle + 1
 		} else if rotateArray[middle] < rotateArray[right] {
@@ -30,4 +30,20 @@ func Min(a int, b int) int {
 		return b
 	}
 
+}
+
+func search(nums []int, target int) int {
+	left1, right1 := 0, len(nums)-1
+	for left1 < right1 {
+		mid := (left1 + right1) >> 1
+		if nums[mid] == target {
+			return mid
+		} else if nums[mid] < target {
+			// 说明在右区间
+			left1 = mid + 1
+		} else {
+			right1 = mid - 1
+		}
+	}
+	return -1
 }
