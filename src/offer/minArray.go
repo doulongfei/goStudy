@@ -1,9 +1,9 @@
 package offer
 
 func minNumberInRotateArray(rotateArray []int) int {
-	left, right := 0, len(rotateArray)
+	left, right := 0, len(rotateArray)-1
 	for left < right {
-		middle := left + (right-left)>>1
+		middle := (right + left) >> 1 // >>1 代表除以2
 		if rotateArray[middle] > rotateArray[right] {
 			left = middle + 1
 		} else if rotateArray[middle] < rotateArray[right] {
