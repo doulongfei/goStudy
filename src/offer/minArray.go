@@ -60,9 +60,11 @@ func findPeakElement(nums []int) int {
 	left, right := 0, len(nums)-1
 	for left < right {
 		mid := (left + right) >> 1
+		//右边是往下，不一定有坡峰
 		if nums[mid] > nums[mid+1] {
 			right = mid
 		} else {
+			//右边是往上，一定能找到波峰
 			left = mid + 1
 		}
 	}
