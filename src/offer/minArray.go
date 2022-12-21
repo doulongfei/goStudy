@@ -70,3 +70,22 @@ func findPeakElement(nums []int) int {
 	}
 	return right
 }
+
+// 先排除 数组长度为1，为2 这种情况
+// 长度大于等于3后，从索引1处开始遍历，取索引-1 ，索引+1 与当前比较，都比当前小，返回
+func findPeakElement2(nums []int) int {
+	// write code here
+	length := len(nums)
+	if length == 0 || length == 1 {
+		return 0
+	}
+	if nums[length-1] > nums[length-2] {
+		return length - 1
+	}
+	for i := 1; i < length; i++ {
+		if nums[i] > nums[i-1] && nums[i] > nums[i+1] {
+			return i
+		}
+	}
+	return 0
+}
