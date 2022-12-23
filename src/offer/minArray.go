@@ -15,6 +15,7 @@ func minNumberInRotateArray(rotateArray []int) int {
 	return rotateArray[left]
 }
 
+// 递归
 func minNumberInRotateArray2(rotateArray []int) int {
 	size := len(rotateArray)
 	if size == 1 {
