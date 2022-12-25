@@ -1,12 +1,12 @@
 package offer
 
-func cutRope(number int) int {
-	// write code here
-	if number <= 3 {
-		return number - 1
-	}
-
-}
+//func cutRope(number int) int {
+//	// write code here
+//	if number <= 3 {
+//		return number - 1
+//	}
+//
+//}
 
 func cutRopeShuXue(number int) int {
 	// write code here
