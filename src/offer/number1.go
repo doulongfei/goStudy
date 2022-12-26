@@ -10,3 +10,17 @@ func NumberOf1(n int) int {
 	}
 	return res
 }
+
+func Power(base float64, exponent int) float64 {
+	// write code here
+	if exponent < 0 {
+		base = 1 / base
+		exponent = -exponent
+	}
+	res := 1.0
+	//累乘
+	for i := 0; i < exponent; i++ {
+		res *= base
+	}
+	return res
+}
