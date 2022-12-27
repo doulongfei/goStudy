@@ -1,4 +1,4 @@
-package main
+package offer
 
 import "fmt"
 
@@ -39,7 +39,7 @@ func printNumbers(n int) []int {
 	return res
 }
 func main() {
-	numbers := printNumbers(3)
+	numbers := printNumbers(2)
 	for _, number := range numbers {
 		fmt.Println(number)
 	}
