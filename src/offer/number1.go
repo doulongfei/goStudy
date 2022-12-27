@@ -24,3 +24,15 @@ func Power(base float64, exponent int) float64 {
 	}
 	return res
 }
+func printNumbers(n int) []int {
+	// write code here
+	end := 1
+	for i := 1; i < n; i++ {
+		end *= 10
+	}
+	res := make([]int, end-1)
+	for i := 1; i < end; i++ {
+		res[i-1] = i
+	}
+	return res
+}
