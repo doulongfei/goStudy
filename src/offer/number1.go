@@ -1,4 +1,6 @@
-package offer
+package main
+
+import "fmt"
 
 func NumberOf1(n int) int {
 	// write code here
@@ -27,12 +29,18 @@ func Power(base float64, exponent int) float64 {
 func printNumbers(n int) []int {
 	// write code here
 	end := 1
-	for i := 1; i < n; i++ {
+	for i := 1; i <= n; i++ {
 		end *= 10
 	}
-	res := make([]int, end-1)
+	res := []int{}
 	for i := 1; i < end; i++ {
-		res[i-1] = i
+		res = append(res, i)
 	}
 	return res
+}
+func main() {
+	numbers := printNumbers(3)
+	for _, number := range numbers {
+		fmt.Println(number)
+	}
 }

@@ -1,4 +1,4 @@
-package offer
+package main
 
 //func cutRope(number int) int {
 //	// write code here
