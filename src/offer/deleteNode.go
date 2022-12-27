@@ -4,10 +4,8 @@ func deleteNode(head *ListNode, val int) *ListNode {
 
 	res := &ListNode{}
 	res.Next = head
-
 	pre := res
 	cur := head
-
 	for cur != nil {
 		if cur.Val == val {
 			pre.Next = cur.Next
@@ -15,7 +13,6 @@ func deleteNode(head *ListNode, val int) *ListNode {
 		}
 		pre = cur
 		cur = cur.Next
-
 	}
 	return res.Next
 
