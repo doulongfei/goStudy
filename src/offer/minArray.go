@@ -1,4 +1,4 @@
-package offer
+package main
 
 func minNumberInRotateArray(rotateArray []int) int {
 	left, right := 0, len(rotateArray)-1
