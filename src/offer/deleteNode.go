@@ -101,8 +101,7 @@ func FindKthToTail1(pHead *ListNode, k int) *ListNode {
 		if fast != nil {
 			fast = fast.Next
 		} else {
-			slow = nil
-			return slow
+			return nil
 		}
 	}
 	for fast != nil {
