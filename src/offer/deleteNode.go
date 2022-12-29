@@ -67,3 +67,28 @@ func main() {
 	}
 	fmt.Println()
 }
+
+func FindKthToTail(pHead *ListNode, k int) *ListNode {
+	// write code here
+	if pHead == nil || k == 0 {
+		return nil
+	}
+
+	stack := make([]*ListNode, 0)
+
+	for pHead != nil {
+
+		stack = append(stack, pHead)
+		pHead = pHead.Next
+	}
+	if len(stack) < k {
+		return nil
+	}
+
+	for i := 0; i < k-1; i++ {
+		stack = stack[:len(stack)-1]
+	}
+
+	return stack[len(stack)-1]
+
+}
