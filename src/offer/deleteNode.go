@@ -92,3 +92,22 @@ func FindKthToTail(pHead *ListNode, k int) *ListNode {
 	return stack[len(stack)-1]
 
 }
+
+func FindKthToTail1(pHead *ListNode, k int) *ListNode {
+	// write code here
+	fast, slow := pHead, pHead
+
+	for i := 0; i < k; i++ {
+		if fast != nil {
+			fast = fast.Next
+		} else {
+			slow = nil
+			return slow
+		}
+	}
+	for fast != nil {
+		fast = fast.Next
+		slow = slow.Next
+	}
+	return slow
+}
