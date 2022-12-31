@@ -110,3 +110,8 @@ func FindKthToTail1(pHead *ListNode, k int) *ListNode {
 	}
 	return slow
 }
+
+// 环形链表的开始
+func EntryNodeOfLoop(pHead *ListNode) *ListNode {
+
+}
