@@ -11,6 +11,5 @@ func main() {
 	required.Add("english")
 	required.Add("math")
 	required.Add("biology")
-
 	fmt.Print(required)
 }
