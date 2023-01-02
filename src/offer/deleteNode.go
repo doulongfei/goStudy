@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 //func deleteNode(head *ListNode, val int) *ListNode {
 //
@@ -112,6 +114,6 @@ func FindKthToTail1(pHead *ListNode, k int) *ListNode {
 }
 
 // 环形链表的开始
-func EntryNodeOfLoop(pHead *ListNode) *ListNode {
-
-}
+//func EntryNodeOfLoop(pHead *ListNode) *ListNode {
+//
+//}
