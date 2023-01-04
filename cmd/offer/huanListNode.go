@@ -40,3 +40,7 @@ func EntryNodeOfLoop(pHead *ListNode) *ListNode {
 	return fast
 
 }
+
+func ReverseList(pHead *ListNode) *ListNode {
+	// write code here
+}
