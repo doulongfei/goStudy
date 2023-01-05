@@ -44,3 +44,7 @@ func EntryNodeOfLoop(pHead *ListNode) *ListNode {
 func ReverseList(pHead *ListNode) *ListNode {
 	// write code here
 }
+
+func Merge(pHead1 *ListNode, pHead2 *ListNode) *ListNode {
+	// write code here
+}
