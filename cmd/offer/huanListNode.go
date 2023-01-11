@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-
 	set "github.com/deckarep/golang-set/v2"
 )
 
@@ -48,5 +47,22 @@ func ReverseList(pHead *ListNode) *ListNode {
 
 func Merge(pHead1 *ListNode, pHead2 *ListNode) *ListNode {
 	// write code here
-	return pHead2
+	head := new(ListNode)
+	cur := head
+	for pHead1 != nil && pHead2 != nil {
+		if pHead1.Val < pHead2.Val {
+			cur.Next = pHead1
+			pHead1 = pHead1.Next
+		} else {
+			cur.Next = pHead2
+			pHead2 = pHead2.Next
+		}
+		cur = cur.Next
+	}
+	if pHead1 == nil {
+		cur.Next = pHead2
+	} else {
+		cur.Next = pHead1
+	}
+	return head.Next
 }
