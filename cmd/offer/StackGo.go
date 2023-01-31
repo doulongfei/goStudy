@@ -23,10 +23,14 @@ func Push(node int) {
 }
 func Pop() {
 	// write code here
+	stack1 = stack1[:len(stack1)-1]
+	stack2 = stack2[:len(stack2)-1]
 }
 func Top() int {
 	// write code here
+	return stack1[len(stack1)-1]
 }
 func Min() int {
 	// write code here
+	return stack2[len(stack2)-1]
 }
